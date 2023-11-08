@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T08:28:13.530Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="G3LtMAHQYkX_CvFmMcCQ" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-08T11:56:02.260Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="BiyjrPA915GMvqg23mZJ" version="22.0.8" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1838" dy="1005" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2152" dy="712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -153,6 +153,33 @@
         </mxCell>
         <mxCell id="f3iddibicTy-kVgMy-kQ-49" value="这是一个Event" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="985" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-52" value="ClientRMService" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=rectanglePerimeter;targetShapes=umlLifeline;participant=label;" vertex="1" parent="1">
+          <mxGeometry x="765" y="1100" width="220" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-58" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="f3iddibicTy-kVgMy-kQ-52">
+          <mxGeometry x="105" y="110" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-54" value="ApplicationClientProtocolPBClientImpl" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="258" y="1110" width="335" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-55" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="f3iddibicTy-kVgMy-kQ-54">
+          <mxGeometry x="162" y="110" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-56" value="submitApplication" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="60" relative="1" as="geometry">
+            <mxPoint x="180" y="1230" as="sourcePoint" />
+            <mxPoint x="420" y="1230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-57" value="RPC: SubmitApplicationResponse submitApplication(&#xa;    SubmitApplicationRequest request)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="f3iddibicTy-kVgMy-kQ-58">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="440" y="1270" as="sourcePoint" />
+            <mxPoint x="520" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f3iddibicTy-kVgMy-kQ-60" value="List commands = new ArrayList();&#xa;commands.add(command.toString());&#xa; ContainerLaunchContext amContainer = ContainerLaunchContext.newInstance(&#xa;  localResources, env, commands, null, null, null);&#xa;appContext.setAMContainerSpec(amContainer);&#xa;ApplicationSubmissionContext appContext&#xa;&#xa;yarnClient.submitApplication(appContext);" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="1140" width="530" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
